@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>TROMPIS EXTREMO</title>
+
+<style>
+body {
+    margin: 0;
+    background: radial-gradient(circle, #ff0080, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Impact, sans-serif;
+    cursor: pointer;
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    color: yellow;
+    font-size: 5rem;
+    text-shadow: 5px 5px 20px red;
+    animation: parpadeo 0.3s infinite alternate;
+}
+
+@keyframes parpadeo {
+    from { opacity: 1; }
+    to { opacity: 0.6; }
+}
+
+img {
+    width: 120vw;
+    filter: contrast(150%) saturate(200%);
+    animation: zoom 2s infinite alternate ease-in-out;
+}
+
+@keyframes zoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+.mensaje {
+    position: absolute;
+    bottom: 30px;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 10px black;
+}
+</style>
+</head>
+<body>
+
+<h1>TROMPIS MODO DIOS 🐘🔥</h1>
+<img src="trompis.png">
+
+<div class="mensaje">🔥 HACÉ CLICK PARA ACTIVAR EL MOMO 🔊</div>
+
+<audio id="sonido" loop>
+    <source src="momo.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const audio = document.getElementById("sonido");
+
+document.body.addEventListener("click", () => {
+    audio.volume = 1.0;
+    audio.play();
+});
+</script>
+
+</body>
+</html>
